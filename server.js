@@ -14,7 +14,10 @@ const app = express()
 const port = process.env.PORT || 3000
 
 /** this project needs a db !! **/
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
 
 app.use(cors())
 
