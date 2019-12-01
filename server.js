@@ -7,15 +7,11 @@ const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const dns = require('dns')
-
 const cors = require('cors')
 
 const app = express()
-
-// Basic Configuration
 const port = process.env.PORT || 3000
 
-/** this project needs a db !! **/
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
@@ -28,10 +24,7 @@ db.once('open', () => {
 })
 
 app.use(cors())
-
-/** this project needs to parse POST bodies **/
 app.use(bodyParser.urlencoded({ extended: false }))
-
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
