@@ -25,6 +25,7 @@ db.once('open', () => {
 
   app.post('/api/shorturl/new', (req, res) => {
     const url = req.body.url
+
     dns.lookup(url, err => {
       if (err) return res.json({ error: 'invalid URL' })
 
