@@ -1,7 +1,6 @@
 require('dotenv').config()
 
 const express = require('express')
-// const mongo = require('mongodb')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const dns = require('dns')
