@@ -1,41 +1,30 @@
 <!DOCTYPE html>
-
 <html lang="en-US">
-
-   <head>
-      <title>URL Shortener</title>
-      <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon"/>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-      <link href="style.css" rel="stylesheet" type="text/css">
-   </head>
-
-   <body>
-      <div class="container">
-        <h1>URL Shortener Microservice</h1>
-
-        <h2>Short URL Creation </h2>
-        <p>
-          example: <code>POST [project_url]/api/shorturl/new</code> - <code>https://www.google.com</code>
-        </p>
-        <form action="api/shorturl/new" method="POST">
-          <label for="url_input">URL to be shortened</label>
-          <input id="url_input" type="text" name="url">
-          <input type="submit" value="POST URL">
-        </form>
-
-        <h2>Example Usage:</h2>
-        <a href="https://slipskid-urlshortener.glitch.me/api/shorturl/3">
-          [project_url]/api/shorturl/3
-        </a>
-
-        <h2>Will Redirect to:</h2>
-        <p>https://www.freecodecamp.org/forum/</p>
-      </div>
-      <div class="footer">
-        <p>
-          by <a href="https://www.freecodecamp.org">freeCodeCamp</a>
-        </p>
-      </div>
-   </body>
-
+<head>
+    <title>URL Shortener</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container">
+    <h1>URL Shortener Microservice</h1>
+    <h2>Short URL Creation</h2>
+    <p>
+        example: <code>POST [project_url]/api/shorturl/new</code> - <code>www.google.com</code>
+    </p>
+    <form action="api/shorturl/new" method="POST">
+        <label for="url_input">URL to be shortened</label>
+        <input id="url_input" type="text" name="url">
+        <input type="submit" value="POST URL">
+    </form>
+    <h2>Example Usage:</h2>
+    <p>
+        [server url]/api/shorturl/3
+    </p>
+    <h2>Will Redirect to:</h2>
+    <p>
+        https://www.freecodecamp.org/forum/
+    </p>
+</div>
+</body>
 </html>
