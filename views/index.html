@@ -14,13 +14,17 @@
         <input id="url_input" type="text" name="url" placeholder="www.example.com">
         <input type="submit" value="POST URL">
     </form>
-    <h2>Example Usage:</h2>
+    <h2>Example Usage</h2>
     <p>
-        <code>[server url]/api/shorturl/5de5f5d773ab18343ce02cab</code>
+        POST <code>www.your-url.com</code><br>
+        Returns: <code>{"original_url":"www.your-url.com","short_url":"your-id-string"}</code>
     </p>
-    <h2>Will Redirect to:</h2>
     <p>
-        <code>https://www.google.com</code>
+        GET <code>[server_url]/api/shorturl/your-id-string</code><br>
+        Redirects To: <code>https://www.your-url.com</code>
+    </p>
+    <p>
+        Bad URL Returns: <code>{"error":"invalid URL"}</code>
     </p>
 </div>
 </body>
