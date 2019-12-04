@@ -9,21 +9,18 @@
 <div class="container">
     <h1>URL Shortener Microservice</h1>
     <h2>Short URL Creation</h2>
-    <p>
-        example: <code>POST [project_url]/api/shorturl/new</code> - <code>www.google.com</code>
-    </p>
     <form action="api/shorturl/new" method="POST">
         <label for="url_input">URL to be shortened</label>
-        <input id="url_input" type="text" name="url">
+        <input id="url_input" type="text" name="url" placeholder="www.example.com">
         <input type="submit" value="POST URL">
     </form>
     <h2>Example Usage:</h2>
     <p>
-        [server url]/api/shorturl/3
+        <code>[server url]/api/shorturl/5de5f5d773ab18343ce02cab</code>
     </p>
     <h2>Will Redirect to:</h2>
     <p>
-        https://www.freecodecamp.org/forum/
+        <code>https://www.google.com</code>
     </p>
 </div>
 </body>
