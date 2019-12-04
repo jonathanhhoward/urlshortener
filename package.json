@@ -12,7 +12,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongodb": "^3.3.5",
-    "mongoose": "^5.7.12"
+    "mongoose": "^5.7.13"
   },
   "engines": {
     "node": "12.13.0"
@@ -27,5 +27,5 @@
   "bugs": {
     "url": "https://github.com/slipskid/urlshortener/issues"
   },
-  "homepage": "https://github.com/slipskid/urlshortener#readme"
+  "homepage": "https://slipskid-urlshortener.glitch.me"
 }
