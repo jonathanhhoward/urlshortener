@@ -18,12 +18,12 @@ mongoose.connect(process.env.MONGODB_URI, {
   useUnifiedTopology: true
 }).catch(console.error)
 
-const db = mongoose.connection
-db.on('error', console.error.bind(console, 'Mongoose connection error:'))
-db.once('open', () => {
-  console.log('Mongoose connected')
-  app.use('/api/shorturl', urlShortener(mongoose))
-})
+mongoose.connection
+  .on('error', console.error.bind(console, 'Mongoose connection error:'))
+  .once('open', () => {
+    console.log('Mongoose connected')
+    app.use('/api/shorturl', urlShortener(mongoose))
+  })
 
 const server = app.listen(process.env.PORT || 3000, () => {
   console.log(
