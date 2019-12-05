@@ -1,11 +1,11 @@
 module.exports = (mongooseRef) => {
-  const route = require('express').Router()
+  const router = require('express').Router()
   const dns = require('dns')
 
   const urlSchema = new mongooseRef.Schema({ url: String })
   const Url = new mongooseRef.model('Url', urlSchema)
 
-  route.post('/new', (req, res) => {
+  router.post('/new', (req, res) => {
     const url = req.body.url
 
     dns.lookup(url, err => {
@@ -26,12 +26,12 @@ module.exports = (mongooseRef) => {
     })
   })
 
-  route.get('/:id', (req, res) => {
+  router.get('/:id', (req, res) => {
     Url.findById(req.params.id, (err, url) => {
       if (err) return console.error(err)
       res.redirect('http://' + url.url)
     })
   })
 
-  return route
+  return router
 }
