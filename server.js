@@ -8,15 +8,15 @@ const urlShortener = require('./urlshortener')
 
 const app = express()
 
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(cors())
+app.use(express.static('public'))
+app.get('/', (req, res) => res.sendFile(__dirname + '/views/index.html'))
+
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).catch(console.error)
-
-app.use(cors())
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(express.static('public'))
-app.get('/', (req, res) => res.sendFile(__dirname + '/views/index.html'))
 
 const db = mongoose.connection
 db.on('error', console.error.bind(console, 'Mongoose connection error:'))
