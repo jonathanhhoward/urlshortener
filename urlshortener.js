@@ -2,8 +2,7 @@ module.exports = (mongooseRef) => {
   const router = require('express').Router()
   const dns = require('dns')
 
-  const urlSchema = new mongooseRef.Schema({ url: String })
-  const Url = new mongooseRef.model('Url', urlSchema)
+  const Url = mongooseRef.model('Url', new mongooseRef.Schema({ url: String }))
 
   router.post('/new', (req, res) => {
     const url = req.body.url
