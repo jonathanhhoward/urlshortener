@@ -20,11 +20,11 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/slipskid/urlshortener.git"
+    "url": "git+https://github.com/jonathanhhoward/urlshortener.git"
   },
   "author": "Jonathan Howard",
   "bugs": {
-    "url": "https://github.com/slipskid/urlshortener/issues"
+    "url": "https://github.com/jonathanhhoward/urlshortener/issues"
   },
-  "homepage": "https://slipskid-urlshortener.glitch.me"
+  "homepage": "https://jhhoward-urlshortener.glitch.me"
 }
